@@ -1,0 +1,132 @@
+.profile-container {
+    background-color: white;
+    border-radius   : 10px;
+    padding         : 5px;
+}
+
+.data-container {
+    display       : flex;
+    flex-direction: column;
+    border-radius : 15px;
+    padding       : 10px 5px;
+}
+
+.profile-name,
+.profile-id {
+    text-transform: capitalize;
+    color         : var(--color-gray-White);
+    font-size     : 26px;
+}
+
+.container-name {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    padding        : 10px;
+}
+
+.profile-image {
+    scale     : 2;
+    align-self: center;
+    max-width : 300px;
+}
+
+.ul-data {
+    list-style: none;
+}
+
+.statistics-container {
+    background-color: var(--color-gray-White);
+    padding         : 10px;
+    border-radius   : 15px;
+}
+
+.type-container,
+.ul-data {
+    padding-left: 0px;
+}
+
+.type-name {
+    width         : 100px;
+    text-align    : center;
+    border-radius : 10px;
+    color         : var(--color-gray-White);
+    font-weight   : 700;
+    text-transform: capitalize;
+    margin        : 30px auto;
+}
+
+.inner-title {
+    display    : block;
+    font-size  : 30px;
+    text-align : center;
+    font-weight: 700;
+}
+
+.about-container {
+    display        : flex;
+    justify-content: space-around;
+}
+
+.weight,
+.height,
+.moves-container {
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-around;
+    height         : 100px;
+    color          : var(--color-gray-dark);
+    font-size      : 16px;
+    font-weight    : 700;
+    font-style     : italic;
+}
+
+.botton-title {
+    font-size  : small;
+    color      : var(--color-gray-Medium);
+    font-weight: 500;
+    font-style : normal;
+}
+
+.abilities {
+    display        : flex;
+    justify-content: space-between;
+    color          : var(--color-gray-dark);
+    font-size      : 16px;
+    font-weight    : 700;
+    font-style     : italic;
+}
+
+.stats-list {
+    list-style: none;
+    padding   : 0;
+}
+
+.stat-item {
+    display      : flex;
+    align-items  : center;
+    margin-bottom: 10px;
+}
+
+.stat-name {
+    flex          : 1;
+    text-transform: capitalize;
+}
+
+.stat-bar-container {
+    flex            : 4;
+    background-color: #f1f1f1;
+    border-radius   : 4px;
+    overflow        : hidden;
+    margin          : 0 10px;
+}
+
+.stat-bar {
+    height       : 20px;
+    border-radius: 4px 0 0 4px;
+}
+
+.stat-value {
+    flex      : 1;
+    text-align: right;
+}

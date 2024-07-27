@@ -1,0 +1,42 @@
+.list-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 10px;
+    margin-top: 27px;
+    background-color: white;
+    border-radius: 10px;
+    gap: 10px;
+    padding: 10px 2px;
+}
+
+.card-container{
+    max-width: 108px;
+    min-width: 104px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: var(--color-gray-White) 1px solid;
+    box-shadow: 10px 10px 5px 0px rgba(240,240,240,1);
+    border-radius: 15px;
+
+}
+
+.card-image{
+    max-width: 76px;
+    min-width: 72px;
+}
+
+.card-id{
+    align-self: flex-end;
+    padding-right: 3%;
+}
+
+.card-name{
+    display: flex;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 600;
+    vertical-align: bottom;
+}

@@ -1,0 +1,44 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-links{
+    color: var(--color-gray-White);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.title-app{
+    color: var(--color-gray-White);
+    font-size: 28px;
+    text-decoration: none;
+    }
+
+.home{
+    margin-bottom: 30px;
+}
+
+.form{
+    display: flex;
+    justify-content: space-around;
+
+}
+.form-input{
+    width: 80%;
+    height: 2em;
+    color: var(--color-gray-dark);
+    border: var(--color-gray-White);
+    border-radius: 10px;
+
+}
+
+
+.searchsvg{
+    background-color: var(--color-gray-White);
+    border: none;
+    color: var(--color-gray-White);
+    border-radius: 10px;
+    width: 20%;
+}

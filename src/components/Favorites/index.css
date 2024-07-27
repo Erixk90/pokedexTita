@@ -1,0 +1,32 @@
+.buttons-favorites{
+    background-color: transparent;
+    border:none;
+    border-radius: 50%;
+}
+
+.favorite{
+    background-color: transparent;
+    border-radius: 50%;
+    font-size: 18px;
+    color: var(--color-gray-Light);
+    
+
+}
+
+.unfavorite{
+    background-color: red;
+    border-radius: 50%;
+    color: var(--color-gray-Light);
+}
+
+.favorites-container{
+    background-color: var(--color-gray-White);
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.title-favorites{
+    font-size: large;
+    color: var(--color-gray-dark);
+
+}
