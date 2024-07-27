@@ -1,30 +1,37 @@
-import React, { useCallback, useState } from "react";
-import { useDispatch } from "react-redux";
-import GetPokemons from "./GetPokemons";
-import { useNavigate } from "react-router-dom";
-import { setPokemonName } from "../../store/slices/pokemonSlice";
-import { validatePokemonName } from "../../utils/utils";
-import searchsvg from "../../assets/search.svg";
-import "./index.css";
+import React, { useCallback, useState } from "react"
+import { useDispatch } from "react-redux"
+import GetPokemons from "./GetPokemons"
+import { useNavigate } from "react-router-dom"
+import { setPokemonName } from "../../store/slices/pokemonSlice"
+import { validatePokemonName } from "../../utils/utils"
+import searchsvg from "../../assets/search.svg"
+import "./index.css"
 
 const Home = () => {
-  const [search, setSearch] = useState("");
-  const [error, setError] = useState("");
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
+  const [search, setSearch] = useState("")
+  const [error, setError] = useState("")
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   const handleSearch = useCallback((event) => {
-    setSearch(event.target.value);
+    setSearch(event.target.value)
   }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validatePokemonName(search)) {
-      dispatch(setPokemonName(search));
+      dispatch(setPokemonName(search))
       setError("");
-      navigate(`/pokemon/${search}`);
+      navigate(`/pokemon/${search}`)
     } else {
-      setError("Nombre inválido");
+      setError("Nombre inválido")
+    }
+  };
+
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault()
     }
   };
 
@@ -36,6 +43,7 @@ const Home = () => {
           type="text"
           value={search}
           onChange={handleSearch}
+          onKeyDown={handleKeyDown}
           placeholder={`  Busca un Pokemon`}
         />
         <button className="searchsvg" type="submit">{<img src={searchsvg}/>}</button>

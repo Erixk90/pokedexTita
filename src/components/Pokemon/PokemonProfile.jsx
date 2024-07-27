@@ -5,6 +5,7 @@ import { GET_POKEMON_BY_ID } from "../../graphql/getPokemonByID";
 import PokemonDetail from "../Favorites/PokemonDetail";
 import typeColors from "../../utils/typeColors";
 import "./index.css";
+import Loading from '../../utils/Loading'
 
 const PokemonProfile = () => {
   const { id } = useParams();
@@ -12,9 +13,7 @@ const PokemonProfile = () => {
     variables: { id },
   });
 
-  console.log(data, "data?");
-
-  if (loading) return <div>Cargando detalles del Pokémon...</div>;
+  if (loading) return <div><Loading /></div>;
   if (error) return <div>Error: {error.message}</div>;
 
   const pokemon = data?.pokemon_v2_pokemon_by_pk || [];

@@ -3,6 +3,7 @@ import { useQuery } from '@apollo/client'
 import { GET_POKEMONS } from '../../graphql/getPokemons'
 import './index.css'
 import PokemonCard from './PokemonCard'
+import Loading from '../../utils/Loading'
 
 
 const GetPokemons = ({search}) => {
@@ -10,7 +11,7 @@ const GetPokemons = ({search}) => {
   const { data, loading, error } = useQuery(GET_POKEMONS);
 
 
-  if (loading) return <div>Cargando Los pokemons...</div>;
+  if (loading) return <div><Loading /></div>;
   if (error) return <div>Error: {error.message}</div>;
 
   const pokemons = data?.pokemon_v2_pokemon || []
